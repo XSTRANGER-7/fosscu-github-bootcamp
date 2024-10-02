@@ -1,0 +1,220 @@
+/* body {
+    background-color: #000;
+    font-family: Arial, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #141718;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 36px;
+    height: 36px;
+}
+
+.heading {
+    text-align: center;
+    font-size: 3rem;
+    color: #0DFF1C;
+    margin: 40px 0;
+}
+
+.members-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 80px;
+}
+
+.member-card {
+    background-color: #1c1c1c;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+.member-card:hover {
+    transform: scale(1.05);
+}
+
+.member-card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.member-card h3 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+}
+
+.member-card p {
+    font-size: 1rem;
+    color: #aaa;
+}
+
+.footer {
+    background-color: #141718;
+    padding: 20px;
+    text-align: center;
+}
+
+.explore-btn {
+    background-color: #0DFF1C;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.explore-btn:hover {
+    opacity: 0.8;
+}
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+ body {
+    background-color: #000;
+    font-family: Arial, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #141718;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 36px;
+    height: 36px;
+}
+
+.heading {
+    text-align: center;
+    font-size: 3rem;
+    color: #0DFF1C;
+    margin: 40px 0;
+}
+
+.members-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 80px;
+}
+
+.member-card {
+    background-color: #1c1c1c;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative; /* To position the circular border correctly */
+}
+
+.image-wrapper {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto; /* Center the wrapper */
+}
+
+.circular-border {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 110px; /* Slightly larger than the image */
+    height: 110px; /* Slightly larger than the image */
+    border-radius: 50%;
+    background: conic-gradient(#0DFF1C 0%, #0DFF1C 40%, transparent 40%, transparent 60%, #0DFF1C 60%, #0DFF1C 100%); /* Half-filled effect */
+    animation: rotate-border 2s ease-in-out infinite; 
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+@keyframes rotate-border {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.member-card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    position: relative; /* Ensure image appears above the border */
+    z-index: 1; /* Bring image to the front */
+}
+
+.member-card h3 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+}
+
+.member-card p {
+    font-size: 1rem;
+    color: #aaa;
+}
+
+.footer {
+    background-color: #141718;
+    padding: 20px;
+    text-align: center;
+}
+
+.explore-btn {
+    background-color: #0DFF1C;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.explore-btn:hover {
+    opacity: 0.8;
+}
