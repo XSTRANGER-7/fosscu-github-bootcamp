@@ -6,25 +6,26 @@
     <title>Team Page</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <!-- Navbar Section -->
+<body> 
+    <div id="loader" class="loader">
+        <div class="spinner"></div>
+    </div>
+ 
     <nav class="navbar">
         <div class="logo">
             <img src="https://fosscu.org/fosscu.png" alt="logo" />
             <h1>FOSSCU</h1>
         </div>
-        <button class="explore-btn"  onclick="window.location.href=`https://fosscu.org/`" >Explore</button>
+        <button class="explore-btn" onclick="window.location.href='https://fosscu.org/'">Explore</button>
     </nav>
-
-    <!-- Content Section -->
+ 
     <div class="content">
         <h2 class="heading">Getting Started With Git</h2>
         <div class="members-container" id="members-container">
             <!-- Member cards will be dynamically inserted here by script.js -->
         </div>
     </div>
-
-    <!-- Footer Section -->
+ 
     <footer class="footer">
         <p>FOSSCU</p>
         <p>Made with 💚 and Open Source</p>
@@ -32,4 +33,9 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
+
+
+
+

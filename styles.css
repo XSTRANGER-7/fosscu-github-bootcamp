@@ -1,106 +1,3 @@
-/* body {
-    background-color: #000;
-    font-family: Arial, sans-serif;
-    color: white;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #141718;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.logo img {
-    width: 36px;
-    height: 36px;
-}
-
-.heading {
-    text-align: center;
-    font-size: 3rem;
-    color: #0DFF1C;
-    margin: 40px 0;
-}
-
-.members-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 80px;
-}
-
-.member-card {
-    background-color: #1c1c1c;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    width: 250px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s ease-in-out;
-}
-
-.member-card:hover {
-    transform: scale(1.05);
-}
-
-.member-card img {
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-}
-
-.member-card h3 {
-    margin: 10px 0;
-    font-size: 1.5rem;
-}
-
-.member-card p {
-    font-size: 1rem;
-    color: #aaa;
-}
-
-.footer {
-    background-color: #141718;
-    padding: 20px;
-    text-align: center;
-}
-
-.explore-btn {
-    background-color: #0DFF1C;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 20px;
-}
-
-.explore-btn:hover {
-    opacity: 0.8;
-}
- */
-
-
-
-
-
-
-
-
-
-
-
-
 
  body {
     background-color: #000;
@@ -206,6 +103,149 @@
     text-align: center;
 }
 
+.explore-btn {
+    background-color: #0DFF1C;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.explore-btn:hover {
+    opacity: 0.8;
+}
+
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensures the loader is above all other content */
+    backdrop-filter: blur(1px); /* Blurs the background */
+}
+
+.spinner {
+    border: 8px solid rgba(255, 255, 255, 0.3);
+    border-top: 8px solid #0DFF1C; /* Spinner color */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite; /* Spin animation */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+/* Loader Styles */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensures the loader is above all other content */
+    backdrop-filter: blur(5px); /* Blurs the background */
+}
+
+.spinner {
+    border: 8px solid rgba(255, 255, 255, 0.3);
+    border-top: 8px solid #0DFF1C; /* Spinner color */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite; /* Spin animation */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Member card styles */
+.member-card {
+    background-color: #1c1c1c;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for scaling and shadow */
+}
+
+/* Hover effect for member cards */
+.member-card:hover {
+    transform: scale(1.05); /* Scale up on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Change shadow on hover */
+}
+
+/* Circular background behind image */
+.image-background {
+    position: absolute;
+    top: 0px; /* Adjust to your preference */
+    left: 0px; /* Adjust to your preference */
+    width: 100px; /* Adjust size */
+    height: 100px; /* Adjust size */
+    border-radius: 50%;
+    background: rgba(13, 255, 28, 0.2); /* Semi-transparent green background */
+    z-index: 0; /* Place behind the image */
+    animation: circularMove 4s linear infinite; /* Circular move animation */
+}
+
+@keyframes circularMove {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(10px, 10px); /* Change the values for the desired movement */
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/* Member card image styles */
+.member-card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    position: relative; /* Ensure image appears above the background */
+    z-index: 1; /* Bring image to the front */
+}
+
+.member-card h3 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+}
+
+.member-card p {
+    font-size: 1rem;
+    color: #aaa;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #141718;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Explore Button Styles */
 .explore-btn {
     background-color: #0DFF1C;
     border: none;
